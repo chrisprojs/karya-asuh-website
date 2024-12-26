@@ -9,11 +9,11 @@
       { "src": "/bootstrap/(.*)", "dest": "/public/bootstrap/$1" },
       { "src": "/css/(.*)", "dest": "/public/css/$1" },
       { "src": "/empty-image/(.*)", "dest": "/public/empty-image/$1" },
-      { "src": "/storage/(.*)", "dest": "/storage/app/public/$1" },
+      { "src": "/storage/(.*)", "dest": "/public/storage/$1" },
       { "src": "/(.*)", "dest": "/api/index.php" }
   ],
   "public": true,
-  "buildCommand": "vite build",
+  "buildCommand": "php artisan storage:link && vite build",
   "outputDirectory": "public",
   "env": {
       "APP_ENV": "production",
