@@ -9,10 +9,6 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 
-Route::get('/foo', function () {
-    Artisan::call('storage:link');
-});
-
 Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 
