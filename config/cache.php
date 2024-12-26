@@ -48,7 +48,7 @@ return [
 
         'file' => [
             'driver' => 'file',
-            'path' => '/tmp/cache',
+            'path' => env('CACHE_PATH', '/tmp/cache'),  // Fallback to /tmp/cache if not set
         ],
 
         'memcached' => [
